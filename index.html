@@ -3,22 +3,19 @@
 
     <head>
         <meta charset="utf-8">
-        <title>GlslCanvas</title>
+        <title>[SEAL.c] Hw1_ProceduralHatching</title>
         <script type="text/javascript" src="dist/GlslCanvas.js"></script>
         <style>
-            :root {
-                --ar: 1;
-            }
-
             body {
                 background: #000000;
+                margin: 0;
+                padding: 0;
             }
 
             #glslCanvas {
                 display: block;
-                width: min(100vw, calc(100svh * var(--ar)));
-                height: min(100svh, calc(100vw / var(--ar)));
-                aspect-ratio: var(--ar);
+                max-height: 100svh;
+                place-self: center;
             }
         </style>
     </head>
@@ -37,17 +34,36 @@
 
         var shading;
 
-        canvas.style.width = '100%';
-        canvas.style.height = '100%';
-
         const img = new Image();
         img.src = 'data/taobo.PNG';
         img.onload = () => {
-            const ar = img.naturalWidth / img.naturalHeight;
-            canvas.style.setProperty('--ar', ar);
             canvas.width = img.naturalWidth;
             canvas.height = img.naturalHeight;
         }
     </script>
 
 </html>
+
+<!-- 
+# ___________________________________________
+# *******************************************
+# -------------------------------------------
+#    ______   _______       _       __
+#   // ____| ||  ____|     //\     || |
+#  || (___   || |__       //  \    || |
+#   \\___ \  ||  __|     // /\ \   || |
+#   ____)) | || |____   // ____ \  || |____
+#  ||_____/  ||______| //_/    \_\ ||______|
+# ___________________________________________
+# *******************************************
+# -------------------------------------------
+#
+#         ⏜                        ⏜
+#       ⎛ ◕ᴥ◕⎞   ---------------  ⎛◕ᴥ◕ ⎞
+#       ⎝ ⊃   ⊃ | @超可愛小海豹  | ⊂   ⊂ ⎠
+#        \　 ⎠   ---------------   ⎝   /
+#         \ /       |陳奕銓|         \ /
+#          ω                         ω
+# ___________________________________________
+# -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+-->
